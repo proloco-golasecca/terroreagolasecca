@@ -3,13 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Terrore A Golasecca – Pro Loco Golasecca</title>
+  <title>#TerroreAGolasecca</title>
+  <meta name="description" content="#TerroreAGolasecca – Pro Loco Golasecca">
+
+  <!-- Anteprima quando il link viene condiviso (WhatsApp, Facebook, ecc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="#TerroreAGolasecca">
+  <meta property="og:description" content="Pro Loco Golasecca">
+  <meta property="og:url" content="https://terrorea.golasecca.org/">
+  <meta property="og:image" content="https://terrorea.golasecca.org/media/terrore-a-golasecca.jpeg">
+
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 15vh auto; padding: 0 1rem; text-align: center; }
+    /* Il nero coincide con lo sfondo dell'immagine, così non si vedono i bordi */
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #000;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+    img {
+      display: block;
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+    }
   </style>
 </head>
 <body>
-  <h1>TERRORE A GOLASECCA</h1>
-  <p>Sito in costruzione.</p>
+  <main>
+    <img src="media/terrore-a-golasecca.jpeg" width="1600" height="478" alt="Zucca di Halloween sorridente e hashtag #TerroreAGolasecca">
+  </main>
 </body>
 </html>
