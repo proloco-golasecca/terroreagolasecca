@@ -14,4 +14,6 @@ Per aggiornare il sito, modifica `index.html` e pubblica immagini e PDF in `medi
 
 `index.html` contiene il titolo, la descrizione, l'URL canonico e i dati strutturati dell'evento. `sitemap.xml` elenca la pagina pubblica e `robots.txt` indica a Google dove trovare la sitemap.
 
-Per monitorare l'indicizzazione, verifica `https://terrorea.golasecca.org/` in Google Search Console e invia `https://terrorea.golasecca.org/sitemap.xml`. Quando sarà confermata la via esatta della manifestazione, completa anche l'indirizzo dell'evento nei dati strutturati.
+La proprietà `https://terrorea.golasecca.org/` è stata verificata in Google Search Console con il file `google9418ec61e15f144d.html`, e la sitemap è stata inviata il 12 ottobre 2026. **Non rimuovere il file di verifica:** serve a mantenere la proprietà verificata. La pagina principale è stata aggiunta alla coda di scansione di Google; l'indicizzazione e la posizione nei risultati non sono immediate né garantite.
+
+Quando sarà confermata la via esatta della manifestazione, completa anche l'indirizzo dell'evento nei dati strutturati.
