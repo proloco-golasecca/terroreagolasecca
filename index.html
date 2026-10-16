@@ -56,6 +56,7 @@
     @media(max-width:699px){.merch-products{grid-template-columns:1fr}}
     @media(max-width:420px){.nav{padding:0 15px}.map-details,.marauder-footer{align-items:flex-start;flex-direction:column}.marauder-heading{padding:19px}.marauder-frame{padding:5px}.marauder-frame iframe{height:480px}.info-grid{grid-template-columns:1fr}.program-row{grid-template-columns:70px 1fr}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+    .photo-card{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:22px;align-items:center;padding:30px;border:1px solid #ae7746;border-radius:20px;background:radial-gradient(circle at 82% 25%,#ed8b4670,transparent 31%),linear-gradient(125deg,#3e271d,#211b18 66%);box-shadow:0 18px 40px #0004}.photo-card:before{content:'✦';position:absolute;right:26px;top:12px;color:#ffd89999;font-size:34px}.photo-card h3{margin:0 0 10px;font:clamp(1.55rem,5vw,2.2rem)/1.1 var(--serif)}.photo-card p{margin:0;color:#e5d2bd;max-width:520px}.photo-card .cta{margin-top:20px}.photo-card .photo-note{margin-top:10px;color:#c8b8a7;font-size:12px}.photo-art{position:relative;min-height:190px;display:grid;place-items:center}.photo-art:before,.photo-art:after{content:'';position:absolute;width:122px;height:148px;border:7px solid #f5e8cc;border-bottom-width:24px;background:radial-gradient(circle at 70% 25%,#ffe59a 0 12%,transparent 13%),linear-gradient(150deg,#5a4a63,#b36440 60%,#2c3c39);box-shadow:0 12px 23px #0008}.photo-art:before{transform:translate(-25px,2px) rotate(-13deg)}.photo-art:after{transform:translate(28px,1px) rotate(10deg)}.photo-art span{position:relative;z-index:1;font-size:62px;filter:drop-shadow(0 5px 6px #0009)}@media(max-width:699px){.photo-card{grid-template-columns:1fr;padding:23px}.photo-art{min-height:145px;order:-1}.photo-art:before,.photo-art:after{width:94px;height:112px;border-width:5px;border-bottom-width:18px}.photo-art span{font-size:48px}}
   </style>
 </head>
 <body>
@@ -71,6 +72,7 @@
           <a href="#mappa">🗺️　Mappa del Malandrino</a>
           <a href="#parcheggio">🚗　Parcheggio</a>
           <a href="#info">🕸️　Info</a>
+          <a href="#foto">📸　Le tue foto</a>
           <a href="#merchandise">🎃　Merchandise</a>
         </div>
       </details>
@@ -137,6 +139,13 @@
         <article class="info-card"><span class="icon" aria-hidden="true">👨‍👩‍👧</span><strong>Una festa per tutti</strong><p>Grandi e piccoli: tutta la famiglia è invitata alla notte di Halloween.</p></article>
         <article class="info-card"><span class="icon" aria-hidden="true">🚗</span><strong>Come arrivare</strong><p>Golasecca si trova in provincia di Varese. <a href="#parcheggio">Consulta la posizione dell’ingresso del parcheggio.</a></p></article>
         <article class="info-card"><span class="icon" aria-hidden="true">📣</span><strong>Seguici sui social</strong><p>Novità, foto e aggiornamenti di Terrore a Golasecca.</p><div class="social-links"><a href="https://www.facebook.com/share/19ygMtwAT4/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Facebook, apre una nuova scheda">Facebook ↗</a><a href="https://www.instagram.com/terroreagolasecca/?__d=11" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Instagram, apre una nuova scheda">Instagram ↗</a></div></article>
+      </div>
+    </section>
+    <section class="section" id="foto">
+      <div class="section-head"><div class="section-kicker">I ricordi della festa</div><h2>Le tue foto</h2><p class="section-intro">Porta anche i tuoi scatti nella raccolta di Terrore a Golasecca.</p></div>
+      <div class="photo-card">
+        <div><h3>Scatta e condividi la tua serata</h3><p>Hai immortalato un costume, un’attrazione o un momento speciale? Apri la pagina dedicata e segui le istruzioni per scattare o caricare le tue foto.</p><a class="cta" href="https://photocloud.plexora.it/e/halloween-golasecca/6zPir8-0o1d6QuD6rqV6JSW4VNS6Kbja6SNw88pQWf4" target="_blank" rel="noopener noreferrer" aria-label="Scatta o carica le tue foto su Photocloud, apre una nuova scheda">Scatta o carica le foto ↗</a><p class="photo-note">Il link apre Photocloud in una nuova scheda.</p></div>
+        <div class="photo-art" aria-hidden="true"><span>📸</span></div>
       </div>
     </section>
     <section class="section" id="merchandise">
