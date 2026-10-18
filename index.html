@@ -208,5 +208,16 @@
     carousel.addEventListener('scroll',updateCarousel,{passive:true});
     window.addEventListener('resize',()=>carousel.scrollTo({left:slides[activeSlide].offsetLeft-slides[0].offsetLeft,behavior:'auto'}));
   </script>
+  <script>
+    (() => {
+      const counter = document.createElement('img');
+      counter.hidden = true;
+      counter.alt = '';
+      counter.setAttribute('aria-hidden', 'true');
+      counter.referrerPolicy = 'no-referrer';
+      counter.src = 'https://script.google.com/macros/s/AKfycbx47thXUSrjkXBALPxyxUZjj1KR4moXE9RPwZeaoex9nX1CN6OFkGhIxdsEegItQ1AP/exec?t=' + Date.now() + '-' + Math.random();
+      document.body.appendChild(counter);
+    })();
+  </script>
 </body>
 </html>
