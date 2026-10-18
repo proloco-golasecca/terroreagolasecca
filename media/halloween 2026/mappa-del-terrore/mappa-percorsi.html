@@ -17,17 +17,20 @@ a.lbl { cursor: pointer; }
 a.lbl:hover { text-decoration: underline; text-decoration-thickness: 1px; }
 html { background: #cdbb92; }
 body { margin: 0; display: flex; justify-content: center; }
-.page { width: 794px; height: 1123px; flex: none; box-shadow: 0 8px 30px rgba(40,22,8,.4); }
+.map-stage { width: 794px; height: 1123px; flex: none; margin: auto; }
+.page { width: 794px; height: 1123px; flex: none; transform-origin: top left; box-shadow: 0 8px 30px rgba(40,22,8,.4); }
 @page { size: A4; margin: 0; }
 @media print {
   html { background: none; }
-  .page { box-shadow: none; }
+  .map-stage { width: 794px !important; height: 1123px !important; }
+  .page { transform: none !important; box-shadow: none; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 </style>
 </head>
 <body>
-<div class="page">
+<div class="map-stage" id="map-stage">
+<div class="page" id="map-page">
 <div style="position: relative; width: 794px; height: 1123px; overflow: hidden; background: #e8cf94; color: #3a2412; font-family: 'IM Fell English', Georgia, serif">
 <svg width="794" height="1123" viewBox="0 0 794 1123" aria-hidden="true" style="position: absolute; left: 0px; top: 0px"><defs><filter id="r-base" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="7" result="n"></feTurbulence><feDiffuseLighting in="n" lighting-color="#f4dc9c" surfaceScale="1.7"><feDistantLight azimuth="40" elevation="66"></feDistantLight></feDiffuseLighting></filter><filter id="r-blot" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.0045 0.006" numOctaves="4" seed="21" result="t"></feTurbulence><feColorMatrix in="t" type="matrix" values="0 0 0 0 .62  0 0 0 0 .37  0 0 0 0 .11  0 0 0 1.7 -0.66"></feColorMatrix></filter><filter id="r-mid" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" seed="33" result="t"></feTurbulence><feColorMatrix in="t" type="matrix" values="0 0 0 0 .55  0 0 0 0 .33  0 0 0 0 .1  0 0 0 1.6 -0.66"></feColorMatrix></filter><filter id="r-fox" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="5" result="t"></feTurbulence><feColorMatrix in="t" type="matrix" values="0 0 0 0 .34  0 0 0 0 .19  0 0 0 0 .06  0 0 0 15 -10.6"></feColorMatrix></filter><filter id="r-fib" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.7 0.015" numOctaves="2" seed="9" result="t"></feTurbulence><feColorMatrix in="t" type="matrix" values="0 0 0 0 .36  0 0 0 0 .21  0 0 0 0 .07  0 0 0 1.4 -0.55"></feColorMatrix></filter><filter id="r-burn" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="4" result="w"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="w" scale="60" result="d"></feDisplacementMap><feGaussianBlur in="d" stdDeviation="14"></feGaussianBlur></filter><filter id="r-ink" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="w"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="w" scale="2.2"></feDisplacementMap></filter><radialGradient id="r-vig" cx="50%" cy="50%" r="72%"><stop offset="0%" stop-color="#5c3a14" stop-opacity="0"></stop><stop offset="55%" stop-color="#5c3a14" stop-opacity="0"></stop><stop offset="100%" stop-color="#4a2c0c" stop-opacity=".6"></stop></radialGradient><radialGradient id="r-halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ead49a" stop-opacity=".94"></stop><stop offset="68%" stop-color="#ead49a" stop-opacity=".88"></stop><stop offset="100%" stop-color="#ead49a" stop-opacity="0"></stop></radialGradient><clipPath id="r-clip"><rect x="0" y="0" width="794" height="1123"></rect></clipPath></defs><rect width="794" height="1123" fill="#e8cf94" filter="url(#r-base)"></rect><rect width="794" height="1123" fill="#000" filter="url(#r-blot)" opacity=".62"></rect><rect width="794" height="1123" fill="#000" filter="url(#r-mid)" opacity=".32"></rect><rect width="794" height="1123" fill="#000" filter="url(#r-fib)" opacity=".16"></rect><rect width="794" height="1123" fill="#000" filter="url(#r-fox)" opacity=".42"></rect></svg>
 <img src="map_routes_ink.png" alt="" aria-hidden="true" style="position: absolute; left: 88.3px; top: 204.7px; width: 573.3px; height: 740.5px; display: block; opacity: 0.6">
@@ -67,5 +70,18 @@ body { margin: 0; display: flex; justify-content: center; }
 <div style="position: absolute; left: 40px; top: 1046px; width: 714px; text-align: center; white-space: nowrap; font-family: 'IM Fell English', Georgia, serif; font-style: italic; font-size: 14px; line-height: 18px; color: #3f2812"><span style="display: block">Tracciati da file GPX · le impronte indicano il verso di percorrenza · tempi stimati a 4,5 km/h</span><span style="display: block">Mappa © OpenStreetMap contributors</span></div>
 </div>
 </div>
+</div>
+<script>
+  const mapStage = document.getElementById('map-stage');
+  const mapPage = document.getElementById('map-page');
+  function fitMap() {
+    const scale = Math.min(1, document.documentElement.clientWidth / 794);
+    mapStage.style.width = `${794 * scale}px`;
+    mapStage.style.height = `${1123 * scale}px`;
+    mapPage.style.transform = `scale(${scale})`;
+  }
+  window.addEventListener('resize', fitMap, {passive: true});
+  fitMap();
+</script>
 </body>
 </html>
