@@ -219,5 +219,22 @@
       document.body.appendChild(counter);
     })();
   </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        const prepareMaps = () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(() => navigator.serviceWorker.ready)
+            .then(registration => registration.active?.postMessage({ type: 'PREFETCH_MAPS' }))
+            .catch(() => {});
+        };
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(prepareMaps, { timeout: 4000 });
+        } else {
+          setTimeout(prepareMaps, 1500);
+        }
+      });
+    }
+  </script>
 </body>
 </html>
