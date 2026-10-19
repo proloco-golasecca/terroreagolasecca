@@ -52,14 +52,19 @@ a.pt:hover .pop, a.pt:focus-visible .pop { visibility: visible; opacity: 1; tran
 .map:has(a.lbl.k-antro:hover) a.pt.k-antro .pop { visibility: visible; opacity: 1; transform: none; transition-delay: 0s; }
 .map:has(a.lbl.k-antro:hover) a.pt.k-antro svg { transform: scale(1.14); }
 html { background: #cdbb92; }
-body { margin: 0; display: flex; justify-content: center; }
-.map-stage { width: 794px; height: 1123px; flex: none; margin: auto; }
+body { margin: 0; display: flex; flex-direction: column; align-items: center; }
+.map-stage { width: 794px; height: 1123px; flex: none; margin: 0 auto; }
 .page { width: 794px; height: 1123px; flex: none; transform-origin: top left; box-shadow: 0 8px 30px rgba(40,22,8,.4); }
+.home-return { display: flex; justify-content: center; width: 100%; padding: 18px 16px 28px; box-sizing: border-box; }
+.home-return a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 24px; border-radius: 999px; background: #3a2412; color: #f4e3b2; font: 600 16px/1.2 Georgia, serif; text-decoration: none; }
+.home-return a:hover, .home-return a:focus-visible { background: #59371d; outline: 2px solid #f4e3b2; outline-offset: 3px; }
+.embedded .home-return { display: none; }
 @page { size: A4; margin: 0; }
 @media print {
   html { background: none; }
   .map-stage { width: 794px !important; height: 1123px !important; }
   .page { transform: none !important; box-shadow: none; }
+  .home-return { display: none; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 </style>
@@ -148,7 +153,9 @@ body { margin: 0; display: flex; justify-content: center; }
 </div>
 </div>
 </div>
+<nav class="home-return" aria-label="Ritorna al sito"><a href="../../../index.html#inizio">← Torna alla home</a></nav>
 <script>
+  if (new URLSearchParams(window.location.search).get('embed') === '1') document.documentElement.classList.add('embedded');
   const mapStage = document.getElementById('map-stage');
   const mapPage = document.getElementById('map-page');
   function fitMap() {
