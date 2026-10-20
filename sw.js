@@ -1,10 +1,13 @@
 // La cache contiene solo le tre mappe e le immagini usate al loro interno.
-const CACHE_NAME = 'terrore-map-v20261019-1';
+const CACHE_NAME = 'terrore-map-v20261020-privacy-1';
 const MAP_DIR = 'media/halloween%202026/mappa-del-terrore/';
 const MAP_FILES = [
   'index.html',
   'mappa-percorsi.html',
   'mappa-tour.html',
+  'fonts/im-fell-english-regular.ttf',
+  'fonts/im-fell-english-italic.ttf',
+  'fonts/pinyon-script.ttf',
   'map_ink_a4b.png',
   'map_routes_ink.png',
   'map_tour_ink.png',
