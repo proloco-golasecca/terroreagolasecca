@@ -63,6 +63,7 @@
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
     .photo-card{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:22px;align-items:center;padding:30px;border:1px solid #ae7746;border-radius:20px;background:radial-gradient(circle at 82% 25%,#ed8b4670,transparent 31%),linear-gradient(125deg,#3e271d,#211b18 66%);box-shadow:0 18px 40px #0004}.photo-card:before{content:'✦';position:absolute;right:26px;top:12px;color:#ffd89999;font-size:34px}.photo-card h3{margin:0 0 10px;font:clamp(1.55rem,5vw,2.2rem)/1.1 var(--serif)}.photo-card p{margin:0;color:#e5d2bd;max-width:520px}.photo-card .cta{margin-top:20px}.photo-card .photo-note{margin-top:10px;color:#c8b8a7;font-size:12px}.photo-art{position:relative;min-height:190px;display:grid;place-items:center}.photo-art:before,.photo-art:after{content:'';position:absolute;width:122px;height:148px;border:7px solid #f5e8cc;border-bottom-width:24px;background:radial-gradient(circle at 70% 25%,#ffe59a 0 12%,transparent 13%),linear-gradient(150deg,#5a4a63,#b36440 60%,#2c3c39);box-shadow:0 12px 23px #0008}.photo-art:before{transform:translate(-25px,2px) rotate(-13deg)}.photo-art:after{transform:translate(28px,1px) rotate(10deg)}.photo-art span{position:relative;z-index:1;font-size:62px;filter:drop-shadow(0 5px 6px #0009)}@media(max-width:699px){.photo-card{grid-template-columns:1fr;padding:23px}.photo-art{min-height:145px;order:-1}.photo-art:before,.photo-art:after{width:94px;height:112px;border-width:5px;border-bottom-width:18px}.photo-art span{font-size:48px}}
     .footer a,.photo-note a,.merch-note a{color:var(--lime)}.privacy-panel{position:fixed;left:16px;right:16px;bottom:16px;z-index:30;max-width:620px;margin:auto;padding:20px;border:1px solid var(--lime);border-radius:18px;background:#211b17;box-shadow:0 12px 45px #000b}.privacy-panel[hidden]{display:none}.privacy-panel h2{margin:0 0 7px;font:1.4rem var(--serif)}.privacy-panel p{margin:0;color:var(--muted);font-size:14px}.privacy-panel a{color:var(--lime)}.privacy-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.privacy-actions button{min-height:44px;padding:8px 17px;border:1px solid var(--lime);border-radius:999px;cursor:pointer;font-weight:800}.privacy-actions .privacy-reject{background:transparent;color:var(--cream)}.privacy-actions .privacy-accept{background:var(--lime);color:#19160f}
+    .carousel-dots{display:grid;grid-template-columns:repeat(8,10px);justify-content:center}
   </style>
 </head>
 <body>
@@ -96,25 +97,33 @@
   </section>
   <main id="contenuto">
     <section class="section" id="aspettando-halloween">
-      <div class="section-head"><div class="section-kicker">Otto immagini da sfogliare</div><h2>Le locandine dell’evento</h2><p class="section-intro">Scorri le immagini per scoprire cosa ti aspetta a Terrore a Golasecca.</p></div>
+      <div class="section-head"><div class="section-kicker">Sedici immagini da sfogliare</div><h2>Le locandine dell’evento</h2><p class="section-intro">Scorri le immagini per scoprire cosa ti aspetta a Terrore a Golasecca.</p></div>
       <div class="carousel" aria-label="Locandine di Terrore a Golasecca 2026">
-        <div class="carousel-stage" id="locandine-carousel" tabindex="0" aria-label="Scorri le otto locandine">
+        <div class="carousel-stage" id="locandine-carousel" tabindex="0" aria-label="Scorri le sedici locandine">
           <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-01.jpeg" alt="Locandina principale di Halloween a Golasecca 2026, tema L’Inquisizione" width="1644" height="2048"></figure>
           <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-02.jpeg" alt="Locandina della galleria delle streghe" loading="lazy" width="1644" height="2048"></figure>
+          <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-02.1.jpeg" alt="Locandina con il programma dettagliato dell'evento" loading="lazy" width="596" height="843"></figure>
           <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-03.jpeg" alt="Locandina del percorso della paura" loading="lazy" width="1123" height="1401"></figure>
           <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-04.jpeg" alt="Locandina della mostra dei mostri" loading="lazy" width="1284" height="1600"></figure>
           <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-05.jpeg" alt="Locandina delle streghe della galleria e dei selfie" loading="lazy" width="1644" height="2048"></figure>
           <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-06.jpeg" alt="Locandina del flashmob di Halloween" loading="lazy" width="1642" height="2048"></figure>
           <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-07.jpeg" alt="Locandina delle cartomanti" loading="lazy" width="1644" height="2048"></figure>
           <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-08.jpeg" alt="Locandina del Dolcetto o Scherzetto Tour" loading="lazy" width="1132" height="1599"></figure>
+          <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-09.jpeg" alt="Locandina promozionale di Terrore a Golasecca con figura incappucciata" loading="lazy" width="1644" height="2048"></figure>
+          <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-10.jpeg" alt="Locandina del Percorso della Paura e della strega Rosetta" loading="lazy" width="1644" height="2048"></figure>
+          <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-11.jpeg" alt="Locandina degli strumenti di tortura scenografici" loading="lazy" width="1644" height="2048"></figure>
+          <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-12.jpeg" alt="Locandina di invito a Terrore a Golasecca" loading="lazy" width="1644" height="2048"></figure>
+          <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-13.jpeg" alt="Locandina del Bar Bara" loading="lazy" width="1644" height="2048"></figure>
+          <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-14.jpeg" alt="Locandina della Taverna degli Orchi" loading="lazy" width="1644" height="2048"></figure>
+          <figure class="carousel-slide"><img src="./media/halloween%202026/carosello-15.jpeg" alt="Locandina della serata con aperitivo a tema Halloween" loading="lazy" width="1644" height="2048"></figure>
         </div>
         <button class="carousel-arrow carousel-prev" type="button" aria-label="Locandina precedente" disabled>‹</button>
         <button class="carousel-arrow carousel-next" type="button" aria-label="Locandina successiva">›</button>
         <div class="carousel-controls">
           <div class="carousel-dots" aria-label="Scegli una locandina">
-            <button type="button" aria-label="Mostra locandina 1" aria-current="true"></button><button type="button" aria-label="Mostra locandina 2"></button><button type="button" aria-label="Mostra locandina 3"></button><button type="button" aria-label="Mostra locandina 4"></button><button type="button" aria-label="Mostra locandina 5"></button><button type="button" aria-label="Mostra locandina 6"></button><button type="button" aria-label="Mostra locandina 7"></button><button type="button" aria-label="Mostra locandina 8"></button>
+            <button type="button" aria-label="Mostra locandina 1" aria-current="true"></button><button type="button" aria-label="Mostra locandina 2"></button><button type="button" aria-label="Mostra locandina 3"></button><button type="button" aria-label="Mostra locandina 4"></button><button type="button" aria-label="Mostra locandina 5"></button><button type="button" aria-label="Mostra locandina 6"></button><button type="button" aria-label="Mostra locandina 7"></button><button type="button" aria-label="Mostra locandina 8"></button><button type="button" aria-label="Mostra locandina 9"></button><button type="button" aria-label="Mostra locandina 10"></button><button type="button" aria-label="Mostra locandina 11"></button><button type="button" aria-label="Mostra locandina 12"></button><button type="button" aria-label="Mostra locandina 13"></button><button type="button" aria-label="Mostra locandina 14"></button><button type="button" aria-label="Mostra locandina 15"></button><button type="button" aria-label="Mostra locandina 16"></button>
           </div>
-          <span class="carousel-count" aria-live="polite">1 / 8</span>
+          <span class="carousel-count" aria-live="polite">1 / 16</span>
         </div>
       </div>
     </section>
