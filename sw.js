@@ -1,5 +1,5 @@
 // La cache contiene solo le tre mappe e le immagini usate al loro interno.
-const CACHE_NAME = 'terrore-map-v20261020-privacy-1';
+const CACHE_NAME = 'terrore-map-v20261029-mapfix-1';
 const MAP_DIR = 'media/halloween%202026/mappa-del-terrore/';
 const MAP_FILES = [
   'index.html',
@@ -25,6 +25,8 @@ const MAP_FILES = [
 ];
 const MAP_URLS = MAP_FILES.map(file => new URL(MAP_DIR + file, self.registration.scope).href);
 const MAP_PATHS = new Set(MAP_URLS.map(url => new URL(url).pathname));
+const MAP_HTML_PATHS = new Set(['index.html', 'mappa-percorsi.html', 'mappa-tour.html']
+  .map(file => new URL(MAP_DIR + file, self.registration.scope).pathname));
 
 self.addEventListener('install', event => {
   event.waitUntil(self.skipWaiting());
@@ -66,6 +68,16 @@ self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);
     const cached = await cache.match(cacheKey);
+    if (MAP_HTML_PATHS.has(url.pathname)) {
+      // Le mappe HTML devono mostrare la versione pubblicata appena la rete è disponibile.
+      try {
+        const response = await fetch(event.request, { cache: 'no-cache' });
+        if (response.ok) event.waitUntil(cache.put(cacheKey, response.clone()).catch(() => {}));
+        return response;
+      } catch {
+        return cached || Response.error();
+      }
+    }
     if (cached) {
       // Risposta immediata dalla cache; la rete aggiorna la prossima apertura.
       event.waitUntil(fetch(event.request, { cache: 'no-cache' })
